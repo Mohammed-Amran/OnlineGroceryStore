@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+* {
+    font-family: "Chewy", system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Headings */
+#heading-title {
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    margin: 20px 0;
+    color: #344C3D;
+    
+}
+
+
+
+
+
+/*=========================- Cart items Style -=========================*/
+
+
+/* Cart Items Display */
+.cart-body {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e6dd;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #4a403a;
+}
+
+.item-details {
+    color: #7f5539;
+    font-size: 14px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+    color: #cb997e;
+}
+
+.empty-cart i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.total-price-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #cb997e;
+}
+
+#totalPrice {
+    float: right;
+    color: #7f5539;
+    font-weight: bold;
+}
+
+
+
+
+/*This section below is responsible for the header, items and the Total price row layout in the cart*/
+
+/* Cart Item Header & Row Styles */
+.cart-item-header,
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e6dd;
+    column-gap: 20px; 
+}
+
+.cart-item-header {
+    border-bottom: 2px solid #7f5539;
+    font-weight: bold;
+    background-color: #f2e9e4;
+    color: #4a403a;
+}
+
+.cart-item-header span,
+.cart-item-row span {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/* Text Alignment for Columns */
+.item-name {
+    text-align: left;
+}
+
+.item-quantity {
+    text-align: center;
+}
+
+.item-price {
+    text-align: right;
+}
+
+
+/*This code snippet is responsible for the Total price label and the Total Price number at the end of the Cart*/
+.total-price-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #cb997e;
+}
+
+.total-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px; /* space between "Total:" and price */
+    font-weight: bold;
+    color: #7f5539;
+    font-size: 16px;
+}
+
+
+
+
+/*==================================================================================================*/
+
+
+
+
+/* Body Styling */
+body {
+   
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+/* Navigation Styles */
+.navtop {
+    overflow: hidden;
+    background-color: #8EA58C;
+    padding: 10px;
+}
+
+.navtop a {
+    font-family: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 16px;
+     color: #344C3D;
+    display: inline-block;
+}
+
+
+
+
+
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 8px;
+    background-color: #fefefe;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+
+
+/* Main Content */
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Card Styles */
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: #F2F3F1;
+    border: 2px solid #8EA58C;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; 
+    padding: 10px;
+}
+
+.card:has(.card-action button:hover) {
+	
+    background-color: #BFCFBB;
+}
+
+.card-content {
+    overflow: hidden; 
+    flex-grow: 1; 
+}
+
+.card-content img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    display: block; 
+}
+
+.card-content h1 {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #4a403a;
+}
+
+.card-action {
+    margin-top: auto; 
+    text-align: center;
+}
+
+.card-action button {
+    background-color: #8EA58C;
+    color: #344C3D;
+    border: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    border-radius: 5px solid #344C3D;
+    cursor: pointer;
+}
+
+.card-action button:hover {
+    background-color: #F2F3F1;
+    color: #344C3D;
+    
+    
+    
+}
+
+
+
+/* Footer */
+#footer {
+    background-color: #8EA58C;
+    color: #344C3D;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space elements out across the row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* Footer Contact (Phone Numbers on Left) */
+.footer__contact {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    flex: 1; /* Take up available space on the left */
+}
+
+/* Footer Email on Right */
+.footer__mail {
+    font-size: 18px;
+    color: black;
+    text-align: right;
+    flex: 1; /* Take up available space on the right */
+}
+
+/* Social Icons Container in the Center */
+.footer__social {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    align-items: center;
+    gap: 10px;
+    flex: 1; /* Take up space in the middle */
+}
+
+/* Social Icon Styles */
+.footer__social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer__social ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.footer__social ul li a:hover {
+    color: white;
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+    #footer {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        text-align: center;
+    }
+
+    .footer__contact, .footer__mail {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .footer__social {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 920px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
