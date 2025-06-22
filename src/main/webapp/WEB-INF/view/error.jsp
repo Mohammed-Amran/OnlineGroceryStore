@@ -57,34 +57,94 @@
 	<div class="center-box">
 
 		<c:if test="${not empty requestScope.SessionError}">
+			
 			<p>
 				<c:out value="${requestScope.SessionError}" />
 			</p>
-			<button class="center-btn"
-				onclick="window.location.href='${pageContext.request.contextPath}/getBackToIndexFromError'">
-				Get Back To Index Page</button>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/getBackToIndexFromError'">
+				
+				Get Back To Index Page
+				
+			</button>
+			
 		</c:if>
+
 
 		<c:if test="${not empty requestScope.loginErrorMessage}">
-			<p>
-				<c:out value="${requestScope.loginErrorMessage}" />
+			
+			<p>			
+				<c:out value="${requestScope.loginErrorMessage}" />				
 			</p>
-			<button class="center-btn"
-				onclick="window.location.href='${pageContext.request.contextPath}/accessLoginPage'">
-				Get Back To Login Page</button>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/accessLoginPage'">
+				
+				Get Back To Login Page
+				
+		    </button>
+		    
 		</c:if>
 
+
 		<c:if test="${not empty requestScope.registrationError}">
+			
 			<p>
 				<c:out value="${requestScope.registrationError}" />
 			</p>
-			<button class="center-btn"
-				onclick="window.location.href='${pageContext.request.contextPath}/accessRegisterPage'">
-				Get Back To Register Page</button>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/accessRegisterPage'">
+				
+				Get Back To Register Page
+				
+		    </button>
+		    
+		</c:if>
+		
+		
+		<c:if test="${not empty requestScope.addItemIntoCartFailureMessage}">
+			
+			<p>
+				<c:out value="${requestScope.addItemIntoCartFailureMessage}" />
+			</p>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/getBackToHomePage'">
+				
+				Get Back To Home Page
+				
+		    </button>
+		    
+		</c:if>
+		
+		<c:if test="${not empty requestScope.itemUpdatingErrorMessage}">
+			
+			<p>
+				<c:out value="${requestScope.itemUpdatingErrorMessage}" />
+			</p>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/accessCartPage'">
+				
+				Get Back To Cart Page
+				
+		    </button>
+		    
+		</c:if>
+		
+		<c:if test="${not empty requestScope.orderInsertionError}">
+			
+			<p>
+				<c:out value="${requestScope.orderInsertionError}" />
+			</p>
+			
+			<button class="center-btn" onclick="window.location.href='${pageContext.request.contextPath}/getBackToHomePage'">
+				
+				Get Back To Home Page
+				
+		    </button>
+		    
 		</c:if>
 
-	</div>
 
+	</div>
 
 
 
