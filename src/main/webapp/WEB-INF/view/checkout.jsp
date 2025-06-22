@@ -325,7 +325,7 @@ body {
 
 			<c:choose>
 			
-				<c:when test="${not empty requestScope.orderedItems}">
+				<c:when test="${not empty sessionScope.orderedItems}">
 
 				<!-- Cart Header -->
 				<div style="border-radius: 10px; margin-bottom: 9px; padding: 15px 20px; /* Top/Bottom: 15px, Left/Right: 20px */ background: #f8f9fa;" class="cart-header">
@@ -350,7 +350,7 @@ body {
 
 				<c:set var="totalAmount" value="0" />
 
-				<c:forEach var="orderedItem" items="${requestScope.orderedItems}">
+				<c:forEach var="orderedItem" items="${sessionScope.orderedItems}">
 					
 					<div class="cart-item">
 
@@ -375,18 +375,18 @@ body {
 								
 							</div>
 
-							<!-- NEW: Show City and Address -->
+							
 							<div style="font-size: 20px; padding-left: 65px; color: #8EA58C;" class="item-city">
 							
 								
-								<c:out value="${selectedCity}" />
+								<c:out value="${orderedItem.selectedCity}" />
 								
 							</div>
 							
 							<div style="font-size: 20px; padding-left: 90px; color: #5c6b5b;" class="item-address">
 							
 								
-								<c:out value="${Address}" />
+								<c:out value="${orderedItem.address}" />
 								
 							</div>
 
