@@ -187,12 +187,13 @@ background-color: #8EA58C;
 		<div class="navtop" id="mynavTop">
 
            
-
+           
+ 
            <a href="" style="float: left;" data-toggle="modal" data-target="#userModal"> <i class="fas fa-user"></i> </a>  
 			
-            <a href="${pageContext.request.contextPath}/accessCartPage" style="float: right;"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> ( ${requestScope.cartCounter} ) </span> </a> 
+            <a href="${pageContext.request.contextPath}/accessCartPage" style="float: right;"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> ( <c:if test="${empty sessionScope.cartCounter }"> 0 </c:if> ${sessionScope.cartCounter} ) </span> </a> 
 
-            <a href="${pageContext.request.contextPath}/accessCheckoutPage" style="float: right;" > <i class="fas fa-box-open"></i> <span class="inbox-items"> ( <c:if test="${empty requestScope.inboxCounter }"> 0 </c:if> ${requestScope.inboxCounter} ) </span> </a>
+            <a href="${pageContext.request.contextPath}/accessCheckoutPage" style="float: right;" > <i class="fas fa-box-open"></i> <span class="inbox-items"> ( <c:if test="${empty sessionScope.inboxCounter }"> 0 </c:if> ${sessionScope.inboxCounter} ) </span> </a>
 
 		</div>
 
@@ -231,15 +232,15 @@ background-color: #8EA58C;
                
                 <c:choose>
                     
-                    <c:when test="${not empty sessionScope.userName || not empty sessionScope.email}">
+                    <c:when test="${not empty sessionScope.username || not empty sessionScope.email}">
                        
                         <!-- User Details Container -->
                         <div class="user-details" style="margin-bottom: 20px;">
                         
                             <p style="margin-bottom: 15px;">
                             
-                                <strong style="color: #344C3D; display: inline-block; width: 80px; font-family: 'Chewy', system-ui;">Name:</strong>
-                                <span style="color: #344C3D; font-weight: 600; font-size: 20px;"><c:out value="${sessionScope.userName}" /></span>
+                                <strong style="color: #344C3D; display: inline-block; width: 80px; font-family: 'Chewy', system-ui;">UserName:</strong>
+                                <span style="color: #344C3D; font-weight: 600; font-size: 20px;"><c:out value="${sessionScope.username}" /></span>
                                 
                             </p>
                             
@@ -442,7 +443,7 @@ background-color: #8EA58C;
 													
 													
 													     <input type="hidden" name="productId" value="${veg.productId}">
-													     <input type="hidden" name="productName" value="${veg.productName}">
+													     <input type="hidden" name="productName" value="${veg.productName}">													     
 													     <input type="hidden" name="productPrice" value="${veg.productPrice}">
 													     <input type="hidden" name="productCategory" value="${veg.productCategory}">
 													     
