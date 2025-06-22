@@ -51,14 +51,14 @@ body {
 
         <div class="card">
 
-            <form name="registerForm" method="post" action="Register">
+            <form name="registerForm" method="post" action="registerUser">
 
 
-                <label for="username" style="font-size: 20px; color: #344C3D;"> Full Name: </label>
-                <input type="text" id="fullname" name="username" placeholder="testuser1" value="testuser1" required>
+                <label for="username" style="font-size: 20px; color: #344C3D;"> Username: </label>
+                <input type="text" id="username" name="username" value="${requestScope.username}"  required>
 
                 <label for="email" style="font-size: 20px; color: #344C3D;"> Email: </label>
-                <input type="email" id="email" name="email" placeholder="testuser@gmail.com" value="testuser@gmail.com" required>
+                <input type="email" id="email" name="email" value="${requestScope.email}"  required>
                 <c:if test="${not empty emailError}">
                 
                    <div style="color:red;">${emailError}</div> <br>
@@ -66,7 +66,7 @@ body {
                 </c:if>
 
                 <label for="password" style="font-size: 20px; color: #344C3D;"> Password: </label>
-                <input type="password" id="password" name="password" placeholder="test12345" value="test12345" required>
+                <input type="password" id="password" name="password" value="${requestScope.password}" required>
 
                 
 
