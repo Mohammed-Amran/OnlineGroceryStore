@@ -12,16 +12,7 @@ public class Product {
 	
 	
 	//Constructor:
-	public Product(int id, String name, String desc, int price, String category, String imgURL) {
-		
-		this.productId = id;
-		this.productName = name;
-		this.productDesc = desc;
-		this.productPrice = price;
-		this.productCategory = category;
-		this.productImgURL = imgURL;
-		
-	}//closing brace of the constructor
+	public Product() {}
 	
 	
 	
