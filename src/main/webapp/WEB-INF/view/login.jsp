@@ -135,10 +135,10 @@ button.btn{
 
 
 				<label for="email" style="font-family: 'Chewy', system-ui; font-size: 20px; color: #344C3D; margin-bottom: 0px;"> <b>Email</b> </label> 
-				<input type="email" id="email" name="email" placeholder="testuser@gmail.com" style="background-color:#F2F3F1; font-family: 'Chewy', system-ui;" value="testuser@gmail.com" required> 
+				<input type="email" id="email" name="email"  style="background-color:#F2F3F1; font-family: 'Chewy', system-ui;" value="${requestScope.email }" required> 
 				
 				<label for="password" style="font-family: 'Chewy', system-ui; font-size: 20px; color: #344C3D; margin-bottom: 0px; margin-top: 5px;"> <b>Password</b> </label>
-				<input type="password" id="password" name="password" placeholder="test12345" style="background-color:#F2F3F1; font-family: 'Chewy', system-ui;" value="test12345"  required>
+				<input type="password" id="password" name="password" style="background-color:#F2F3F1; font-family: 'Chewy', system-ui;" value="${requestScope.password}"  required>
 
                 <div style="display: flex; gap: 22px; justify-content: center; margin-top: 15px;"> 
 
